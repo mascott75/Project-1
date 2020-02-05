@@ -70,6 +70,7 @@ $.ajax({
             division.teams.forEach(team => {
                 var myImg = $(`<img src=${myDictionary[team.id]}>`)
                 $(".container").append(myImg);
+                console.log(myImg)
             })
 
         });
