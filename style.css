@@ -1,0 +1,29 @@
+        #nfl-header {
+            margin-left: -15px;
+            margin-right: -15px;
+            height: 200px;
+            background-color: #012F61;
+        }
+        
+        #NFL-image {
+            height: 200px;
+            width: 170px;
+            margin: auto;
+        }
+        
+        #AFC-image,
+        #NFC-image {
+            height: 70px;
+            width: 70px;
+        }
+        
+        .conf {
+            height: 300px;
+            outline: solid blue;
+            text-align: center;
+        }
+        
+        #teams {
+            outline: solid black;
+            height: fit-content;
+        }
