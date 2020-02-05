@@ -1,0 +1,2 @@
+https://rapidapi.com/theapiguy/api/free-nba/details
+have different pages that displays the last 10 games of the league. 
