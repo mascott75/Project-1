@@ -1,0 +1,51 @@
+#nfl-header {
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 200px;
+    background-color: #012F61;
+}
+
+#NFL-image {
+    height: 200px;
+    width: 170px;
+    margin: auto;
+}
+
+#AFC-image,
+#NFC-image {
+    height: 70px;
+    width: 70px;
+}
+
+.conf {
+    height: 300px;
+    outline: solid blue;
+    text-align: center;
+}
+
+#team-selection {
+    outline: solid black;
+    height: fit-content;
+}
+
+.div-btn {
+    margin-top: 15px;
+    padding: 5px 20px 5px 20px;
+}
+
+.team-logos {
+    height: 40px;
+    width: 40px;
+}
+
+.teams {
+    margin-top: 10px;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.team-btn {
+    background-color: white;
+    border: none;
+    color: red;
+}

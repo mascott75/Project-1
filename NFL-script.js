@@ -1,7 +1,7 @@
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl-t1/teams/hierarchy.json?api_key=b2uf4274y4r7ywx89fmph5e2"
 var myDictionary = {
-    "MIA": "nfl-logos/dolphins.png",
     "BUF": "nfl-logos/bills.png",
+    "MIA": "nfl-logos/dolphins.png",
     "NYJ": "nfl-logos/jets.png",
     "NE": "nfl-logos/patriots.jpg",
     "CIN": "nfl-logos/bengals.png",
@@ -35,46 +35,64 @@ var myDictionary = {
 
 }
 
-var responseTemp;
+var teamsArray = [];
+var responseExt;
 $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function(response) {
     console.log(response)
-    responseTemp = response
+    responseExt = response;
+    // setting the team logos to an array.
 
-    // AFC division variables
-    var afcEast = response.conferences[0].divisions[0];
-    var afcNorth = response.conferences[0].divisions[1];
-    var afcSouth = response.conferences[0].divisions[2];
-    var afcWest = response.conferences[0].divisions[3];
-    // AFC specific variables
-    var afcEastName = response.conferences[0].divisions[0].name;
-    var afcNorthName = response.conferences[0].divisions[1].name;
-    var afcSouthName = response.conferences[0].divisions[2].name;
-    var afcWestName = response.conferences[0].divisions[3].name;
-    // NFC variables
-    var nfcEast = response.conferences[1].divisions[0];
-    var nfcNorth = response.conferences[1].divisions[1];
-    var nfcSouth = response.conferences[1].divisions[2];
-    var nfcWest = response.conferences[1].divisions[3];
-    // NFC specific variables
-    var nfcEastName = response.conferences[1].divisions[0].name;
-    var nfcNorthName = response.conferences[1].divisions[1].name;
-    var nfcSouthName = response.conferences[1].divisions[2].name;
-    var nfcWestName = response.conferences[1].divisions[3].name;
-    var nfcEastName1 = response.conferences[1].divisions[0].teams[0];
-    console.log(nfcEastName1)
     response.conferences.forEach(conference => {
         conference.divisions.forEach(division => {
             division.teams.forEach(team => {
-                var myImg = $(`<img src=${myDictionary[team.id]}>`)
-                $(".container").append(myImg);
+                var myImg = `<img class="team-logos" src=${myDictionary[team.id]}>`
                 console.log(myImg)
-            })
 
+                teamsArray.push(myImg);
+            })
         });
+
     });
+
+    console.log(teamsArray)
+})
+console.log(responseExt)
+
+
+
+
+// responseExt.conferences[0].divisions.unshift("empty");
+$(".div-btn").on("click", function() {
+    $("#AFC-divisions").empty();
+    var currentIndex = $(this).attr("data-index")
+
+
+
+    for (let j = currentIndex - 1; j < currentIndex; j++) {
+        for (let i = 0; i < 4; i++) {
+            var team = responseExt.conferences[0].divisions[j].teams[i].id
+            var afcEastTxt = $(`<div>
+                <div class="teams"><button class="team-btn">${team}</button> ${teamsArray[((j*4)+i)]}</div>
+                </div>`)
+            $("#AFC-divisions").append(afcEastTxt)
+        }
+        $(".team-btn").on("click", function() {
+            console.log(this)
+            var teamAbrv = $(this).text();
+            console.log(teamAbrv)
+            var urlTeam = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl-t1/teams/" + teamAbrv + "/roster.json?api_key=b2uf4274y4r7ywx89fmph5e2"
+            $.ajax({
+                url: urlTeam,
+                method: "GET"
+            }).then(function(responseTeam) {
+                console.log(responseTeam)
+            })
+        })
+
+    }
 
 
 })
