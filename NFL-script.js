@@ -41,7 +41,7 @@ $("#afc-btn").on("click", function() {
 })
 $("#nfc-btn").on("click", function() {
     $("#NFC-divisions").empty();
-    $("#NFC-divisions").append($(`<div><button type="button" id="nfc-east" class="btn btn-outline-primary div-btn-1 data-index="1">NFC East</button></div><div><button type="button" id="nfc-north" class="btn btn-outline-secondary div-btn-1" data-index="2">NFC North</button></div><div><button type="button" id="nfc-south" class="btn btn-outline-success div-btn-1" data-index="3">NFC South</button></div><div><button type="button" id="nfc-west" class="btn btn-outline-danger div-btn-1" data-index="4">NFC West</button></div>`))
+    $("#NFC-divisions").append($(`<div><button type="button" id="nfc-east" class="btn btn-outline-primary div-btn-1" data-index="1">NFC East</button></div><div><button type="button" id="nfc-north" class="btn btn-outline-secondary div-btn-1" data-index="2">NFC North</button></div><div><button type="button" id="nfc-south" class="btn btn-outline-success div-btn-1" data-index="3">NFC South</button></div><div><button type="button" id="nfc-west" class="btn btn-outline-danger div-btn-1" data-index="4">NFC West</button></div>`))
 })
 
 var teamsArray = [];
@@ -115,13 +115,13 @@ $(document).on("click", ".team-btn", function() {
         console.log(responseTeam)
         var teamCity = (responseTeam.market);
         var teamName = (responseTeam.name);
-        var coach = (responseTeam.coaches[0].name_full)
+        var coach = [responseTeam.coaches[0].name_full, responseTeam.coaches[1].name_full, responseTeam.coaches[2].name_full]
         var myImg = `<img class="team-logos-big" src=${myDictionary[responseTeam.id]}>`
         var count = 0;
 
         var roster = responseTeam.players;
 
-        var information = $(`<div class="row" id="team-description"><div class="col-sm-3 offset-sm-2">${myImg}</div><div class="col-sm-4 offset-sm-2" id="team-col"><div id="clicked-team">${teamCity} ${teamName} <div id="coach">Head Coach: ${coach}</div></div></div>`)
+        var information = $(`<div class="row" id="team-description"><div class="col-sm-3 offset-sm-2">${myImg}</div><div class="col-sm-4 offset-sm-2" id="team-col"><div id="clicked-team">${teamCity} ${teamName} <div id="coach">Head Coaches: ${coach[0]}, ${coach[1]}, ${coach[2]}</div></div></div>`)
         $("#temp").append(information)
         var rowPlayers = $(`<div class = "row row-players"></div>`)
         while (count < roster.length) {

@@ -45,6 +45,12 @@ body {
     color: black;
 }
 
+#afc-btn,
+#nfc-btn {
+    background-color: transparent;
+    border: none;
+}
+
 .team-logos {
     height: 40px;
     width: 40px;
@@ -67,7 +73,7 @@ body {
 }
 
 .team-logos-big {
-    height: 300px;
+    height: 400px;
     width: auto;
 }
 
@@ -81,12 +87,14 @@ body {
     margin-top: 50px;
     font-size: 60px;
     color: red;
+    font-weight: bolder;
 }
 
 #coach {
     margin-top: 50px;
-    font-size: 60px;
+    font-size: 50px;
     color: red;
+    font-weight: bolder;
 }
 
 .list-container {
