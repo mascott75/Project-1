@@ -79,20 +79,53 @@ $(".div-btn").on("click", function() {
                 </div>`)
             $("#AFC-divisions").append(afcEastTxt)
         }
-        $(".team-btn").on("click", function() {
-            console.log(this)
-            var teamAbrv = $(this).text();
-            console.log(teamAbrv)
-            var urlTeam = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl-t1/teams/" + teamAbrv + "/roster.json?api_key=b2uf4274y4r7ywx89fmph5e2"
-            $.ajax({
-                url: urlTeam,
-                method: "GET"
-            }).then(function(responseTeam) {
-                console.log(responseTeam)
-            })
-        })
-
     }
+})
+$(document).on("click", ".team-btn", function() {
+    $(".list-container").empty();
+    console.log(this)
+    var teamAbrv = $(this).text();
+    console.log(teamAbrv)
+    var urlTeam = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl-t1/teams/" + teamAbrv + "/roster.json?api_key=b2uf4274y4r7ywx89fmph5e2"
+    $.ajax({
+        url: urlTeam,
+        method: "GET"
+    }).then(function(responseTeam) {
+        console.log(responseTeam)
+        var count = 0;
+
+        var roster = responseTeam.players;
+        var rowPlayers = $(`<div class = "row row-players"></div>`)
+        while (count < roster.length) {
+
+            if (count % 3 === 0) {
+
+                $(".list-container").append(rowPlayers);
+                rowPlayers = $(`<div class = "row row-players"></div>`)
+            }
+            var fullName = responseTeam.players[count].name_full;
+            var college = responseTeam.players[count].college;
+            var jerseyNum = responseTeam.players[count].jersey_number;
+            var draftRnd = responseTeam.players[count].draft_round;
+            var draftPst = responseTeam.players[count].draft_pick;
+            var yearsPlayed = responseTeam.players[count].experience;
+            var position = responseTeam.players[count].position;
+            var displayPlayers = $(`
+                <section class="col-sm-4 player-col">
+                    <div>
+                        <li class="player-list">Player: ${fullName}, #:${jerseyNum}, ${college}</li>
+                        <li class="player-list">Draft: Round-${draftRnd}, pick-${draftPst}</li>
+                        <li class="player-list">Position: ${position}, year-${yearsPlayed}</li>
+                    </div>
+                </section>`)
+
+            rowPlayers.append(displayPlayers)
 
 
+
+
+
+            count++;
+        }
+    })
 })

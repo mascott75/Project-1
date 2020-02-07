@@ -49,3 +49,9 @@
     border: none;
     color: red;
 }
+
+.player-col {
+    height: inherit;
+    outline: solid blue;
+    outline-width: 1px;
+}
