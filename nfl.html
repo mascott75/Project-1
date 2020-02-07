@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="NFL.css">
+    <title>NFL</title>
+</head>
+
+<body>
+    <div>NAVBAR</div>
+    <header class="row" id="nfl-header">
+        <img id="NFL-image" src=" ./img/NFL logo.png " alt="NFL logo ">
+    </header>
+    <div class="container">
+        <article id="team-selection" class="row row-sm-12 ">
+            <section class="col col-sm-4 offset-sm-1 conf">
+                <img id="AFC-image" src="./img/afc-logo-png.png" alt="NFL logo ">
+                <section id="AFC-divisions">
+                    <div><button type="button" id="afc-east" class="btn btn-outline-primary div-btn" data-index="1">AFC East</button></div>
+                    <div><button type="button" id="afc-north" class="btn btn-outline-secondary div-btn" data-index="2">AFC North</button></div>
+                    <div><button type="button" id="afc-south" class="btn btn-outline-success div-btn" data-index="3">AFC South</button></div>
+                    <div><button type="button" id="afc-west" class="btn btn-outline-danger div-btn" data-index="4">AFC West</button>
+                    </div>
+                </section>
+            </section>
+            <section class="col col-sm-4 offset-sm-2 conf">
+                <img id="NFC-image" src="./img/National_Football_Conference_logo.svg.png" alt="NFL logo ">
+                <div><button type="button" id="nfc-east" class="btn btn-outline-primary div-btn" data-index="1">NFC East</button></div>
+                <div><button type="button" id="nfc-north" class="btn btn-outline-secondary div-btn" data-index="2">NFC North</button></div>
+                <div><button type="button" id="nfc-south" class="btn btn-outline-success div-btn" data-index="3">NFC South</button></div>
+                <div><button type="button" id="nfc-west" class="btn btn-outline-danger div-btn" data-index="4">NFC West</button></div>
+                <div id="NFC-divisions"></div>
+            </section>
+        </article>
+    </div>
+    <div class="container list-container">
+
+    </div>
+
+
+    <script src=" https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js "></script>
+    <script src="NFL-script.js "></script>
+</body>
+
+</html>
