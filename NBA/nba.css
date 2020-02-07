@@ -1,0 +1,36 @@
+.live {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.liveHead {
+    background-color: rgb(2, 100, 211);
+}
+
+.card-text {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+.logo {
+    height: 6rem;
+    width: 5rem;
+    background-color: rgb(153, 211, 250);
+}
+
+.cardlogo {
+    margin: auto auto;
+}
+
+.logo:hover {
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(3, 7, 245, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(3, 7, 245, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(3, 7, 245, 0.75);
+}
+
+.teamLogo {
+    height: 200px;
+    width: auto;
+}
