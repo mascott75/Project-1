@@ -12,14 +12,14 @@
 </head>
 
 <body>
-    <div>NAVBAR</div>
+
     <header class="row" id="nfl-header">
         <img id="NFL-image" src=" ./img/NFL logo.png " alt="NFL logo ">
     </header>
     <div class="container">
         <article id="team-selection" class="row row-sm-12 ">
             <section class="col col-sm-4 offset-sm-1 conf">
-                <img id="AFC-image" src="./img/afc-logo-png.png" alt="NFL logo ">
+                <button id="afc-btn"><img id="AFC-image" src="./img/afc-logo-png.png" alt="NFL logo "></button>
                 <section id="AFC-divisions">
                     <div><button type="button" id="afc-east" class="btn btn-outline-primary div-btn" data-index="1">AFC East</button></div>
                     <div><button type="button" id="afc-north" class="btn btn-outline-secondary div-btn" data-index="2">AFC North</button></div>
@@ -29,18 +29,18 @@
                 </section>
             </section>
             <section class="col col-sm-4 offset-sm-2 conf">
-                <img id="NFC-image" src="./img/National_Football_Conference_logo.svg.png" alt="NFL logo ">
-                <div><button type="button" id="nfc-east" class="btn btn-outline-primary div-btn" data-index="1">NFC East</button></div>
-                <div><button type="button" id="nfc-north" class="btn btn-outline-secondary div-btn" data-index="2">NFC North</button></div>
-                <div><button type="button" id="nfc-south" class="btn btn-outline-success div-btn" data-index="3">NFC South</button></div>
-                <div><button type="button" id="nfc-west" class="btn btn-outline-danger div-btn" data-index="4">NFC West</button></div>
-                <div id="NFC-divisions"></div>
+                <button id="nfc-btn"><img id="NFC-image" src="./img/National_Football_Conference_logo.svg.png" alt="NFL logo "></button>
+                <section id="NFC-divisions">
+                    <div><button type="button" id="nfc-east" class="btn btn-outline-primary div-btn-1" data-index="1">NFC East</button></div>
+                    <div><button type="button" id="nfc-north" class="btn btn-outline-secondary div-btn-1" data-index="2">NFC North</button></div>
+                    <div><button type="button" id="nfc-south" class="btn btn-outline-success div-btn-1" data-index="3">NFC South</button></div>
+                    <div><button type="button" id="nfc-west" class="btn btn-outline-danger div-btn-1" data-index="4">NFC West</button></div>
+                </section>
             </section>
         </article>
     </div>
-    <div class="container list-container">
-
-    </div>
+    <div id="temp"></div>
+    <div class="container list-container"></div>
 
 
     <script src=" https://code.jquery.com/jquery-3.4.1.js " integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
