@@ -73,6 +73,7 @@ body {
 }
 
 .team-logos-big {
+    margin: auto;
     height: 400px;
     width: auto;
 }
