@@ -16,3 +16,8 @@ $(document).ready(function() {
         }
     )
 })
+
+// var weatherUrl = ("https://api.sportsdata.io/v3/nba/stats/json/AllStars/2020/bb504563bda7491994e11b52e783c884")
+// $.ajax({ url: weatherUrl, method: "GET" }).then(function(response) {
+//     console.log(response)
+// })
