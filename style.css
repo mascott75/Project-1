@@ -1,55 +1,61 @@
-        #nfl-header {
-            margin-left: -15px;
-            margin-right: -15px;
-            height: 200px;
-            background-color: #012F61;
-        }
-        
-        #NFL-image {
-            height: 200px;
-            width: 170px;
-            margin: auto;
-        }
-        
-        #AFC-image,
-        #NFC-image {
-            height: 70px;
-            width: 70px;
-        }
-        
-        .conf {
-            height: 300px;
-            outline: solid blue;
-            text-align: center;
-        }
-        
-        #teams {
-            outline: solid black;
-            height: fit-content;
-        }
-        
-        h1 {
-            text-align: center;
-            color: rgb(8, 8, 8);
-            font-weight: bold;
-            font-family: inherit;
-        }
-        
-        .move {
-            margin: auto auto;
-        }
-        
-        .card:hover {
-            -webkit-box-shadow: -1px 9px 40px -12px rgba(3, 7, 245, 0.75);
-            -moz-box-shadow: -1px 9px 40px -12px rgba(3, 7, 245, 0.75);
-            box-shadow: -1px 9px 40px -12px rgba(3, 7, 245, 0.75);
-        }
-        
-        .head {
-            padding: 25px;
-            background-color: rgb(223, 223, 223);
-        }
-        
-        .fifaText {
-            margin-bottom: 0 0;
-        }
+body {
+    background: rgb(13, 174, 248);
+}
+
+.headNav {
+    color: rgb(13, 0, 202);
+    z-index: 100;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.d-flex {
+    text-align: end;
+}
+
+.fullscreenVideo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.fullscreenVideo video {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    height: 131%;
+    z-index: -12;
+    opacity: 0.60;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.row {
+    margin-top: 7%;
+}
+
+.move {
+    margin: auto auto;
+}
+
+.card:hover {
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(250, 249, 249, 0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(250, 249, 249, 0.75);
+    box-shadow: -1px 9px 40px -12px rgba(250, 249, 249, 0.75);
+}
+
+.fifaText {
+    margin-bottom: 0 0;
+}
