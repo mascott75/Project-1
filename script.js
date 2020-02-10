@@ -16,3 +16,7 @@ $(document).ready(function() {
         }
     )
 })
+
+$("#nfl-card").click(function() {
+    location.href = "nfl.html"
+})
