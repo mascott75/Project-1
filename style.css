@@ -14,27 +14,6 @@ body {
     text-align: end;
 }
 
-.fullscreenVideo {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.fullscreenVideo video {
-    position: absolute;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    width: auto;
-    height: 131%;
-    z-index: -12;
-    opacity: 0.60;
-}
-
 h1 {
     text-align: center;
     color: rgb(8, 8, 8);
