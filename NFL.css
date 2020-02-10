@@ -9,7 +9,8 @@ body {
     box-shadow: 0 0 3pt 2pt white;
     border-radius: 25px;
     opacity: 90%;
-    margin: 5px;
+    margin: 0 auto;
+    margin-bottom: 5px;
 }
 
 #NFL-image {
@@ -75,7 +76,7 @@ body {
 .team-logos-big {
     margin: auto;
     height: 400px;
-    width: auto;
+    width: 450;
 }
 
 #team-col {
@@ -106,6 +107,7 @@ body {
     height: inherit;
     outline-width: 1px;
     border-radius: 30px;
+    text-align: center;
     color: red;
     font-weight: bold;
     font-size: large;
