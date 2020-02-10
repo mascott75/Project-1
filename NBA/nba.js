@@ -60,21 +60,54 @@ $.ajax(settings).done(function(response) {
 
 });
 
-// live NBA games API
-// var settings = {
-//     "async": true,
-//     "crossDomain": true,
-//     "url": "https://api-nba-v1.p.rapidapi.com/games/live/",
-//     "method": "GET",
-//     "headers": {
-//         "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-//         "x-rapidapi-key": "3c294ad22bmshdb279125c188473p1aed37jsne14aaa78a30c"
-//     }
-// }
+//live NBA games API
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api-nba-v1.p.rapidapi.com/games/live/",
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
+        "x-rapidapi-key": "3c294ad22bmshdb279125c188473p1aed37jsne14aaa78a30c"
+    }
+}
 
-// $.ajax(settings).done(function(response) {
-//     console.log(response);
-// });
+$.ajax(settings).done(function(response) {
+    console.log(response);
+
+    //live Score bord 1
+    $(".team1").text(response.api.games[0].vTeam.fullName);
+    $(".team1Score").text(response.api.games[0].vTeam.score.points);
+
+    $(".team2").text(response.api.games[0].hTeam.fullName);
+    $(".team2Score").text(response.api.games[0].hTeam.score.points);
+
+    //live Score bord 2
+    $(".team3").text(response.api.games[1].vTeam.fullName);
+    $(".team3Score").text(response.api.games[1].vTeam.score.points);
+
+    $(".team4").text(response.api.games[1].hTeam.fullName);
+    $(".team4Score").text(response.api.games[1].hTeam.score.points);
+
+    //live Score bord 3
+    $(".team5").text(response.api.games[2].vTeam.fullName);
+    $(".team5Score").text(response.api.games[2].vTeam.score.points);
+
+    $(".team6").text(response.api.games[2].hTeam.fullName);
+    $(".team6Score").text(response.api.games[2].hTeam.score.points);
+
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 var test = "Hello";
